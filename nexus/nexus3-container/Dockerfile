@@ -11,7 +11,7 @@ COPY opt/sonatype/nexus/etc /opt/sonatype/nexus/etc
 # 2. Fix permissions
 RUN yum install -y wget \
   && yum clean all \
-  && curl --fail --silent --location --retry 3 https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 -o /usr/local/bin/jq \
+  && curl --fail --silent --location --retry 3 http://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 -o /usr/local/bin/jq \
   && /usr/local/bin/fix-permissions.sh /usr/local/bin \
   && /usr/local/bin/fix-permissions.sh /opt/sonatype \
   && chmod 775 /usr/local/bin/* \
