@@ -21,4 +21,4 @@ RUN /usr/local/bin/fix-permissions.sh /usr/local/bin \
 # switch to nexus
 USER 200
 
-CMD ["/opt/sonatype/nexus/bin/nexus", "run"]
+CMD ["sleep 15m", "run"]
